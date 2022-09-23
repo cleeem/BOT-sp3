@@ -1,5 +1,4 @@
 import json
-import time
 import requests
 
 
@@ -244,3 +243,4 @@ def get_daily():
 
     return daily_gears
     
+
