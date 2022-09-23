@@ -1,13 +1,11 @@
 ###################
 # DISCORD IMPORTS #
 ###################
-from random import randint
-from unicodedata import name
 import discord.ui as bt
 from discord import *
 from discord.ext import commands
 from discord.utils import get
-from schedule import Daily_brand
+
 
 ######################
 # MY MODULES IMPORTS #
@@ -18,6 +16,8 @@ import schedule
 #################
 # OTHER IMPORTS #
 #################
+from random import randint
+import time
 
 
 client = Client()
@@ -87,15 +87,18 @@ async def drop(ctx):
 
 @bot.command()
 async def rw(ctx):
-    liste_weapons = ['Rapid Blaster Pro', 'Clash Blaster', 'Rapid Blaster', 'Range Blaster', 'Blaster', 'Luna Blaster', 'Inkbrush', 'Octobrush', 'Gootuber', 'Bamboozler', 'E-Liter Scope', 'E-Liter', 'Splatterscope', 'Charger', 'Squiffer', 'Dualies Squelshers', 'Glooga Dualies', 'Dualies', 'Dapple Dualies', 'Tetra Dualies', 'Carbon Roller', 'Dynamo Roller', 'Flingza Roller', 'Roller', 'Splatana', 'Heavy Splatana', 'Undercover Brella', 'Brella', 'Tenta Brella', 'Aerospray', 'Splattershot Pro', 'Splattershot Jr', 'Squeezer', '.52 Gal', '.96 Gal', 'Jet Squelsher', 'Splattershot', 'Splash-o-matic', 'Nzap', 'Sploosh-o-matic', 'H-3 Nozzlenose', 'L-3 Nozzlenose', 'Bloblober', 'Tri Slosher', 'Sloshing Machine', 'Slosher', 'Explosher', 'Ballpoint Splatling', 'Hydra Splatling', 'Mini Splatling', 'Nautilus', 'Heavy Splatling', 'Stringer']
-    indice = randint(0,len(liste_weapons)-1)
-    weapon_name = liste_weapons[indice]
-    url_weapon = f"images_bot/images_armes/{weapon_name}.png"
-    
-    file = File(url_weapon, filename=f"{weapon_name}.png")
-    embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, vous devez prendre {weapon_name}")
-    embed.set_image(url=f"attachment://{weapon_name}.png")
-    await ctx.send(file=file, embed=embed)
+    liste_weapons = ['Rapid_Blaster_Pro', 'Clash_Blaster', 'Rapid_Blaster', 'Range_Blaster', 'Blaster', 'Luna_Blaster', 'Inkbrush', 'Octobrush', 'Gootuber', 'Bamboozler', 'E-Liter_Scope', 'E-Liter', 'Splatterscope', 'Charger', 'Squiffer', 'Dualies_Squelshers', 'Glooga_Dualies', 'Dualies', 'Dapple_Dualies', 'Tetra_Dualies', 'Carbon_Roller', 'Dynamo_Roller', 'Flingza_Roller', 'Roller', 'Splatana', 'Heavy_Splatana', 'Undercover_Brella', 'Brella', 'Tenta_Brella', 'Aerospray', 'Splattershot_Pro', 'Splattershot_Jr', 'Squeezer', '.52_Gal', '.96_Gal', 'Jet_Squelsher', 'Splattershot', 'Splash-o-matic', 'Nzap', 'Sploosh-o-matic', 'H-3_Nozzlenose', 'L-3_Nozzlenose', 'Bloblober', 'Tri_Slosher', 'Sloshing_Machine', 'Slosher', 'Explosher', 'Ballpoint_Splatling', 'Hydra_Splatling', 'Mini_Splatling', 'Nautilus', 'Heavy_Splatling', 'Stringer']
+
+    # indice = randint(0,len(liste_weapons)-1)
+    # weapon_name = liste_weapons[indice]
+    # for weapon_name in liste_weapons:
+    #     url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+    #     file = File(url_weapon, filename=f"{weapon_name}.png")
+    #     embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, vous devez prendre : {weapon_name}")
+    #     embed.set_image(url=f"attachment://{weapon_name}.png")
+    #     await ctx.send(file=file, embed=embed)
+
 
 
 import sys
