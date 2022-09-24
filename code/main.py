@@ -65,7 +65,6 @@ async def splatnet(ctx):
         embed_stuff.set_image(url=data.gear_url)
         await ctx.send(embed=embed_stuff)
 
-
 @bot.command()
 async def drop(ctx):
     daily_brand = schedule.get_daily()
@@ -236,7 +235,6 @@ async def rw(ctx, *args):
         embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
         await ctx.send(file=file, embed=embed)
 
-
 def stuff_image(liste):
     for i,elt in enumerate(liste):
         if elt == "ssu":
@@ -328,7 +326,6 @@ def stuff_image(liste):
 
         else:
             fs.uk(i+1)
-
     
 def stuff_emote(liste):
     stuf = []
@@ -467,12 +464,77 @@ async def stuff(ctx, *args):
 
     await ctx.send(view=view, embed=embed_message)
 
-
+@bot.command()
+async def bonus(ctx):
+    embed = Embed(title="Bonus", description="""ssu <:ssu:855390371827023882> ; scu <:scu:855390371840000001> ; iss <:iss:855390372125868063> ; ss <:ss:855390372129144842> 
+\nsbpu <:sbpu:855390365895753749> ; og <:og:855390372141465610> ; dr <:dr:855390372204773387> ; qr <:qr:855390372208312330>  
+\nspu <:spu:855390372254318622> ; ns <:ns:855390376185692180> ; sj <:sj:855390376235892756> ; ti <:ti:855390376374304798>
+\nsbpu <:sbpu:855390365895753749> ; hnt <:hnt:855390366453989426> ; lde <:lde:855390366755717120> ; rp <:rp:855390366991646730>
+\nrsu <:rsu:855390367264407572> ; iru <:iru:855390367464292352> ; ism <:ism:855390367586975745> ; qsj <:qsj:855390367745310750>
+\ntnty <:tnty:855390368065388576> ; os <:os:855390368778027038> ; ir <:ir:855390370362556436> ; ia <:ia:1019332137687724032>
+\nsru <:sru:1019332176782839868> ; ab <:ab:855479824009527306> ; uk <:uk:855479856511057951>
+                                                """, color=0x33CAFF)
+    await ctx.send(embed=embed)
+    
+    
 @bot.command()
 async def github(ctx):
     await ctx.send("https://github.com/cleeem/BOT-sp3")
 
 
+@bot.command()
+async def help(ctx):
+    message_commande = ctx.message
+
+    membre = ctx.author
+
+    dico = {'fields': [
+            {'inline': False, 'name': "Command : map ", 'value': "``` show the current rotation in every mode ```"}, 
+            {'inline': False, 'name': "Command : drop ", 'value': "``` show the drop of the day ```"},
+            {'inline': False, 'name': "Command : splatnet ", 'value': "``` show the current gears in the app ```"},
+            {'inline': False, 'name': "Command : rw *type* ", 'value': "``` gives you a randow weapon \n (you can specifie the type) \n shooter ; roller; charger; slosher; splatling \n brella ; blaster ; dualies ; splatana ; stringer ```"},
+            {'inline': False, 'name': "Command : stuff *bonus* ", 'value': "``` chose up to 12 bonus in your stuff \n Use the bonus command to see their name```"},
+            
+            ], 'title' : 'Help' , 'color': 3394303, 'type': 'rich', 'description': ""}
+
+    embed_help_1 = Embed.from_dict(dico)     
+
+    embed_docu = Embed(title="Documentation", description="")  
+
+
+    async def callback_1(interaction):
+        if interaction.user.id == membre.id:
+            await interaction.message.edit(embed = embed_help_1)
+
+    async def callback_docu(interaction):
+        if interaction.user.id == membre.id:
+            await interaction.message.edit(embed = embed_docu)
+
+    async def callback_destroy(interaction):
+        if interaction.user.id == membre.id:
+            await interaction.message.delete()
+            await message_commande.delete()
+
+
+    button_1 = bt.Button(label=1, style=ButtonStyle.blurple)
+    button_1.callback = callback_1
+
+    button_docu = bt.Button(label="Documentation",style=ButtonStyle.green)
+    button_docu.callback = callback_docu
+
+    button_destroy = bt.Button(style=ButtonStyle.danger, label="X")
+    button_destroy.callback = callback_destroy
+
+    button_github = bt.Button(style=ButtonStyle.link, label="github", url="https://github.com/cleeem/BOT-sp3")
+
+
+    view = bt.View()
+    view.add_item(button_1)
+    view.add_item(button_docu)
+    view.add_item(button_destroy)
+    view.add_item(button_github)
+
+    await ctx.send(view=view, embed=embed_help_1)
 
 
 import sys
