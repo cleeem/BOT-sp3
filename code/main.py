@@ -11,7 +11,7 @@ from discord.utils import get
 # MY MODULES IMPORTS #
 ######################
 import schedule
-# import fichier_stuff as fs
+import fichier_stuff as fs
 
 #################
 # OTHER IMPORTS #
