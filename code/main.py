@@ -331,7 +331,102 @@ def stuff_image(liste):
 
     
 def stuff_emote(liste):
+    stuf = []
 
+    for i,elt in enumerate(liste):
+        if elt == "ssu":
+            stuf.append("<:ssu:855390371827023882>")
+
+        elif elt == "rsu":
+            stuf.append('<:rsu:855390367264407572>')
+
+        elif elt == "ism":
+            stuf.append('<:ism:855390367586975745>')
+
+        elif elt == "scu":
+            stuf.append('<:scu:855390371840000001>')
+
+        elif elt == "spu":
+            stuf.append('<:spu:855390372254318622>')
+        
+        elif elt == "ss":
+            stuf.append('<:ss:855390372129144842>')
+            
+        elif elt == "qsj":
+            stuf.append('<:qsj:855390367745310750>')
+            
+        elif elt == "qr":
+            stuf.append('<:qr:855390372208312330>')
+            
+        elif elt == "os":
+            stuf.append('<:os:855390368778027038>')
+            
+        # elif elt == "mpu":
+        #     stuf.append('<:mpu:855390368131842068>')
+
+        # elif elt == "bdu":
+        #     stuf.append('<:bdu:855390365708058624>')
+            
+        elif elt == "iss":
+            stuf.append('<:iss:855390372125868063>')
+            
+        elif elt == "cbk":
+            stuf.append('<:bdu:855390365708058624>')
+            
+        elif elt == "ir":
+            stuf.append('<:ir:855390370362556436>')
+            
+        elif elt == "dr":
+            stuf.append('<:dr:855390372204773387>')
+            
+        elif elt == "iru":
+            stuf.append('<:iru:855390367464292352>')
+            
+        elif elt == "lde":
+            stuf.append('<:lde:855390366755717120>')
+            
+        elif elt == "sbpu":
+            stuf.append('<:sbpu:855390365895753749>')
+            
+        elif elt == "tnty":
+            stuf.append('<:tnty:855390368065388576>')
+            
+        elif elt == "hnt":
+            stuf.append('<:hnt:855390366453989426>')
+            
+        elif elt == "ns":
+            stuf.append('<:ns:855390376185692180>')
+            
+        elif elt == "thi":
+            stuf.append('<:ti:855390376374304798>')
+            
+        elif elt == "rsp":
+            stuf.append('<:rp:855390366991646730>')
+            
+        elif elt == "sj":
+            stuf.append('<:sj:855390376235892756>')
+            
+        elif elt == "og":
+            stuf.append('<:og:855390372141465610>')
+
+        elif elt == "sru":
+            stuf.append("<:sru:1019332176782839868>")
+
+        elif elt == "ia":
+            stuf.append("<:ia:1019332137687724032>")
+            
+        elif elt == "ab":
+            stuf.append('<:ab:855479824009527306> ')         
+        
+        elif elt == "uk":
+            stuf.append('<:uk:855479856511057951>')
+
+        if i == 3 or i == 7:
+            stuf.append("oui")
+
+    res = str(stuf).replace("'","").replace(",","").replace("[","").replace("]","").replace("oui","""
+""")
+    return res
 
 @bot.command()
 async def stuff(ctx, *args):
@@ -340,14 +435,14 @@ async def stuff(ctx, *args):
         for i in range(12-len(liste_bonus)):
             liste_bonus.append("uk")
     
-    embed_message = Embed(description = f"How do you want your stuff? \nNote, image can take some time \nYou can save you stuff if you chose image" , color = 0x33CAFF)
+    embed_message = Embed(description = f"How do you want your stuff? \nNote, image can take some time" , color = 0x33CAFF)
 
     async def callback_image(interaction):
         if interaction.user.id == ctx.author.id:
             stuff_image(liste=liste_bonus)
 
             file = File("images_bot/emote_stuff/blanc_resultat.png", filename="blanc_resultat.png")
-            embed = Embed(description="here is your stuff", color=0x33CAFF)
+            embed = Embed(title="STUFF", description="here is your stuff", color=0x33CAFF)
             embed.set_image(url=f"attachment://blanc_resultat.png")
             embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
             await interaction.message.delete()
@@ -355,7 +450,9 @@ async def stuff(ctx, *args):
 
     async def callback_emote(interaction):
         if interaction.user.id == ctx.author.id:
-            pass
+            res_stuff = stuff_emote(liste=liste_bonus)
+            embed_stuff = Embed(title="STUFF", description="here is your stuff \n" + res_stuff, color=0x33CAFF)
+            await interaction.message.edit(embed=embed_stuff)
 
     button_image = bt.Button(label="image", style=ButtonStyle.primary)
     button_image.callback = callback_image
@@ -369,6 +466,12 @@ async def stuff(ctx, *args):
     view.add_item(button_image)
 
     await ctx.send(view=view, embed=embed_message)
+
+
+@bot.command()
+async def github(ctx):
+    await ctx.send("https://github.com/cleeem/BOT-sp3")
+
 
 
 
