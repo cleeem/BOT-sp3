@@ -1,11 +1,11 @@
 from PIL import Image
 
 
-img2 = Image.open("images_bot/emote_stuff/blanc_original_64.png")
+img2 = Image.open("images_bot/emote_stuff/blanc_original.png").convert("RGB")
 
 
 def ab(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/ability_dobler.png")
+    img = Image.open("images_bot/emote_stuff/ability_dobler.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -22,7 +22,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -30,7 +30,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -38,7 +38,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -46,7 +46,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -54,7 +54,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -62,7 +62,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -70,7 +70,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -78,7 +78,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -86,7 +86,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -94,7 +94,7 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -102,12 +102,12 @@ def ab(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def sru(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/Sub_Resistance_Up.png")
+    img = Image.open("images_bot/emote_stuff/Sub_Resistance_Up.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -124,7 +124,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -132,7 +132,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -140,7 +140,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -148,7 +148,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -156,7 +156,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -164,7 +164,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -172,7 +172,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -180,7 +180,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -188,7 +188,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -196,7 +196,7 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -204,12 +204,12 @@ def sru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def sbpu(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/bombDistance_Up.png")
+    img = Image.open("images_bot/emote_stuff/bombDistance_Up.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -226,7 +226,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -234,7 +234,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -242,7 +242,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -250,7 +250,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -258,7 +258,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -266,7 +266,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -274,7 +274,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -282,7 +282,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -290,7 +290,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -298,7 +298,7 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -306,12 +306,12 @@ def sbpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def cbk(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/ComeBack.png")
+    img = Image.open("images_bot/emote_stuff/ComeBack.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -328,7 +328,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -336,7 +336,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -344,7 +344,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -352,7 +352,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -360,7 +360,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -368,7 +368,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -376,7 +376,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -384,7 +384,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -392,7 +392,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -400,7 +400,7 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -408,12 +408,12 @@ def cbk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def hnt(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/DeathMarking.png")
+    img = Image.open("images_bot/emote_stuff/DeathMarking.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -430,7 +430,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -438,7 +438,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -446,7 +446,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -454,7 +454,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -462,7 +462,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -470,7 +470,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -478,7 +478,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -486,7 +486,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -494,7 +494,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -502,7 +502,7 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -510,12 +510,12 @@ def hnt(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def lde(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/EndAllUp.png")
+    img = Image.open("images_bot/emote_stuff/EndAllUp.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -532,7 +532,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -540,7 +540,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -548,7 +548,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -556,7 +556,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -564,7 +564,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -572,7 +572,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -580,7 +580,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -588,7 +588,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -596,7 +596,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -604,7 +604,7 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -612,12 +612,12 @@ def lde(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def rsp(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/Exorcist.png")
+    img = Image.open("images_bot/emote_stuff/Exorcist.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -634,7 +634,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -642,7 +642,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -650,7 +650,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -658,7 +658,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -666,7 +666,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -674,7 +674,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -682,7 +682,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -690,7 +690,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -698,7 +698,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -706,7 +706,7 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -714,12 +714,12 @@ def rsp(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def rsu(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/HumanMove_Up.png")
+    img = Image.open("images_bot/emote_stuff/HumanMove_Up.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -736,7 +736,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -744,7 +744,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -752,7 +752,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -760,7 +760,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -768,7 +768,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -776,7 +776,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -784,7 +784,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -792,7 +792,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -800,7 +800,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -808,7 +808,7 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -816,12 +816,12 @@ def rsu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def iru(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/InkRecovery_Up.png")
+    img = Image.open("images_bot/emote_stuff/InkRecovery_Up.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -838,7 +838,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -846,7 +846,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -854,7 +854,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -862,7 +862,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -870,7 +870,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -878,7 +878,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -886,7 +886,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -894,7 +894,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -902,7 +902,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -910,7 +910,7 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -918,12 +918,12 @@ def iru(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def qsj(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/JumpTime_Save.png")
+    img = Image.open("images_bot/emote_stuff/JumpTime_Save.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -940,7 +940,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -948,7 +948,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -956,7 +956,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -964,7 +964,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -972,7 +972,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -980,7 +980,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -988,7 +988,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -996,7 +996,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1004,7 +1004,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1012,7 +1012,7 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1020,12 +1020,12 @@ def qsj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def ism(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/MainInk_Save.png")
+    img = Image.open("images_bot/emote_stuff/MainInk_Save.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1042,7 +1042,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1050,7 +1050,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1058,7 +1058,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1066,7 +1066,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1074,7 +1074,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -1082,7 +1082,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -1090,7 +1090,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -1098,7 +1098,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1106,7 +1106,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1114,7 +1114,7 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1122,12 +1122,12 @@ def ism(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def mpu(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/MainPowerUp.png")
+    img = Image.open("images_bot/emote_stuff/MainPowerUp.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1144,7 +1144,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1152,7 +1152,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1160,7 +1160,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1168,7 +1168,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1176,7 +1176,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -1184,7 +1184,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -1192,7 +1192,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -1200,7 +1200,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1208,7 +1208,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1216,7 +1216,7 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1224,12 +1224,12 @@ def mpu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def tnty(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/MinorityUp.png")
+    img = Image.open("images_bot/emote_stuff/MinorityUp.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1246,7 +1246,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1254,7 +1254,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1262,7 +1262,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1270,7 +1270,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1278,7 +1278,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -1286,7 +1286,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -1294,7 +1294,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -1302,7 +1302,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1310,7 +1310,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1318,7 +1318,7 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1326,12 +1326,12 @@ def tnty(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def os(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/ObjectEffect_Up.png")
+    img = Image.open("images_bot/emote_stuff/ObjectEffect_Up.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1348,7 +1348,7 @@ def os(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1356,7 +1356,7 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1364,7 +1364,7 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1372,7 +1372,7 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1380,7 +1380,7 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -1388,7 +1388,7 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -1396,7 +1396,7 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -1404,7 +1404,7 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1412,7 +1412,7 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1420,7 +1420,7 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1428,12 +1428,12 @@ def os(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def ir(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/OpInkEffect_Reduction.png")
+    img = Image.open("images_bot/emote_stuff/OpInkEffect_Reduction.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1450,7 +1450,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1458,7 +1458,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1466,7 +1466,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1474,7 +1474,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1482,7 +1482,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -1490,7 +1490,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -1498,7 +1498,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -1506,7 +1506,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1514,7 +1514,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1522,7 +1522,7 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1530,12 +1530,12 @@ def ir(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def ss(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/RespawnSpecialGauge_Save.png")
+    img = Image.open("images_bot/emote_stuff/RespawnSpecialGauge_Save.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1552,7 +1552,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1560,7 +1560,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1568,7 +1568,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1576,7 +1576,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1584,7 +1584,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -1592,7 +1592,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -1600,7 +1600,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -1608,7 +1608,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1616,7 +1616,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1624,7 +1624,7 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1632,12 +1632,12 @@ def ss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def qr(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/RespawnTime_Save.png")
+    img = Image.open("images_bot/emote_stuff/RespawnTime_Save.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1654,7 +1654,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1662,7 +1662,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1670,7 +1670,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1678,7 +1678,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1686,7 +1686,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -1694,7 +1694,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -1702,7 +1702,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -1710,7 +1710,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1718,7 +1718,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1726,7 +1726,7 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1734,12 +1734,12 @@ def qr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def dr(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/SomersaultLanding.png")
+    img = Image.open("images_bot/emote_stuff/SomersaultLanding.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1756,7 +1756,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1764,7 +1764,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1772,7 +1772,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1780,7 +1780,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1788,7 +1788,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -1796,7 +1796,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -1804,7 +1804,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -1812,7 +1812,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1820,7 +1820,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1828,7 +1828,7 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1836,12 +1836,12 @@ def dr(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def scu(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/SpecialIncrease_Up.png")
+    img = Image.open("images_bot/emote_stuff/SpecialIncrease_Up.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1858,7 +1858,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1866,7 +1866,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1874,7 +1874,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1882,7 +1882,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1890,7 +1890,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -1898,7 +1898,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -1906,7 +1906,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -1914,7 +1914,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -1922,7 +1922,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -1930,7 +1930,7 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -1938,12 +1938,12 @@ def scu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def spu(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/SpecialTime_Up.png")
+    img = Image.open("images_bot/emote_stuff/SpecialTime_Up.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -1960,7 +1960,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -1968,7 +1968,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -1976,7 +1976,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -1984,7 +1984,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -1992,7 +1992,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -2000,7 +2000,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -2008,7 +2008,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -2016,7 +2016,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -2024,7 +2024,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -2032,7 +2032,7 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -2040,12 +2040,12 @@ def spu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def ssu(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/SquidMove_Up.png")
+    img = Image.open("images_bot/emote_stuff/SquidMove_Up.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -2062,7 +2062,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -2070,7 +2070,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -2078,7 +2078,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -2086,7 +2086,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -2094,7 +2094,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -2102,7 +2102,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -2110,7 +2110,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -2118,7 +2118,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -2126,7 +2126,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -2134,7 +2134,7 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -2142,12 +2142,12 @@ def ssu(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def ns(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/SquidMoveSpatter_Reduction.png")
+    img = Image.open("images_bot/emote_stuff/SquidMoveSpatter_Reduction.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -2164,7 +2164,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -2172,7 +2172,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -2180,7 +2180,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -2188,7 +2188,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -2196,7 +2196,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -2204,7 +2204,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -2212,7 +2212,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -2220,7 +2220,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -2228,7 +2228,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -2236,7 +2236,7 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -2244,12 +2244,12 @@ def ns(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def og(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/StartAllUp.png")
+    img = Image.open("images_bot/emote_stuff/StartAllUp.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -2266,7 +2266,7 @@ def og(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -2274,7 +2274,7 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -2282,7 +2282,7 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -2290,7 +2290,7 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -2298,7 +2298,7 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -2306,7 +2306,7 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -2314,7 +2314,7 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -2322,7 +2322,7 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -2330,7 +2330,7 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -2338,7 +2338,7 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -2346,12 +2346,12 @@ def og(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def iss(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/SubInk_Save.png")
+    img = Image.open("images_bot/emote_stuff/SubInk_Save.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -2368,7 +2368,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -2376,7 +2376,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -2384,7 +2384,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -2392,7 +2392,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -2400,7 +2400,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -2408,7 +2408,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -2416,7 +2416,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -2424,7 +2424,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -2432,7 +2432,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -2440,7 +2440,7 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -2448,12 +2448,12 @@ def iss(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def sj(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/SuperJumpSign_Hide.png")
+    img = Image.open("images_bot/emote_stuff/SuperJumpSign_Hide.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -2470,7 +2470,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -2478,7 +2478,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -2486,7 +2486,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -2494,7 +2494,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -2502,7 +2502,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -2510,7 +2510,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -2518,7 +2518,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 p=img.getpixel((i,j))
 
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -2526,7 +2526,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 p=img.getpixel((i,j))
                 
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -2534,7 +2534,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -2542,7 +2542,7 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -2550,12 +2550,12 @@ def sj(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def thi(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/ThermalInk.png")
+    img = Image.open("images_bot/emote_stuff/ThermalInk.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -2572,7 +2572,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -2580,7 +2580,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -2588,7 +2588,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -2596,7 +2596,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -2604,7 +2604,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -2612,7 +2612,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -2620,7 +2620,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -2628,7 +2628,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -2636,7 +2636,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -2644,7 +2644,7 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -2652,12 +2652,12 @@ def thi(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def uk(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/Unknown.png").resize(size=(64,64))
+    img = Image.open("images_bot/emote_stuff/Unknown.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -2674,7 +2674,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -2682,7 +2682,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -2690,7 +2690,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -2698,7 +2698,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -2706,7 +2706,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -2714,7 +2714,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -2722,7 +2722,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -2730,7 +2730,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -2738,7 +2738,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -2746,7 +2746,7 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -2754,12 +2754,12 @@ def uk(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
 def ia(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/Action_UP.png")
+    img = Image.open("images_bot/emote_stuff/Intensify_Action.png").resize(size=(96,96))
     
     colonne,ligne = img.size
     
@@ -2776,7 +2776,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 3 :
@@ -2784,7 +2784,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
     elif position == 4 :
@@ -2792,7 +2792,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 5 :
@@ -2800,7 +2800,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 6 :
@@ -2808,7 +2808,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 7 :
@@ -2816,7 +2816,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 8 :
@@ -2824,7 +2824,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+64),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+96),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 9 :
@@ -2832,7 +2832,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 10 :
@@ -2840,7 +2840,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+64,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+96,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 11 :
@@ -2848,7 +2848,7 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+128,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+192,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
     elif position == 12 :
@@ -2856,10 +2856,8 @@ def ia(position,img = img2) :
             for j in range(ligne):
                 
                 p=img.getpixel((i,j))
-                img2.putpixel((i+192,j+128),(p[0],p[1],p[2]))
+                img2.putpixel((i+288,j+192),(p[0],p[1],p[2]))
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
-
-
 
 
 def clear() :
@@ -2889,10 +2887,14 @@ def addincsv(url_file,objet,newline =True, delimiter =  None):
 def save(id,nom_stuff) :
     img = Image.open("images_bot/emote_stuff/blanc_resultat.png")
             
-    img.save(f"stuffs/{id}/{nom_stuff}.png")
+    img.save(f"images_bot/stuffs/{id}/{nom_stuff}.png")
 
     
-ia(7)
+for i in range(13):
+    sru(i)
+
+save(1,"test")
+clear()
     
 
 #clear()
