@@ -243,4 +243,3 @@ def get_daily():
 
     return daily_gears
     
-

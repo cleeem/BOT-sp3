@@ -86,19 +86,160 @@ async def drop(ctx):
         await ctx.send(embed=embed_stuff)
 
 @bot.command()
-async def rw(ctx):
-    liste_weapons = ['Rapid_Blaster_Pro', 'Clash_Blaster', 'Rapid_Blaster', 'Range_Blaster', 'Blaster', 'Luna_Blaster', 'Inkbrush', 'Octobrush', 'Gootuber', 'Bamboozler', 'E-Liter_Scope', 'E-Liter', 'Splatterscope', 'Charger', 'Squiffer', 'Dualies_Squelshers', 'Glooga_Dualies', 'Dualies', 'Dapple_Dualies', 'Tetra_Dualies', 'Carbon_Roller', 'Dynamo_Roller', 'Flingza_Roller', 'Roller', 'Splatana', 'Heavy_Splatana', 'Undercover_Brella', 'Brella', 'Tenta_Brella', 'Aerospray', 'Splattershot_Pro', 'Splattershot_Jr', 'Squeezer', '.52_Gal', '.96_Gal', 'Jet_Squelsher', 'Splattershot', 'Splash-o-matic', 'Nzap', 'Sploosh-o-matic', 'H-3_Nozzlenose', 'L-3_Nozzlenose', 'Bloblober', 'Tri_Slosher', 'Sloshing_Machine', 'Slosher', 'Explosher', 'Ballpoint_Splatling', 'Hydra_Splatling', 'Mini_Splatling', 'Nautilus', 'Heavy_Splatling', 'Stringer']
+async def rw(ctx, *args):
+    liste_weapons = ['Rapid_Blaster_Pro', 'Clash_Blaster', 'Rapid_Blaster', 'Range_Blaster', 'Blaster', 'Luna_Blaster', 'Inkbrush', 'Octobrush', 'Gootuber', 'Bamboozler', 'E-Liter_Scope', 'E-Liter', 'Splatterscope', 'Charger', 'Squiffer', 'Dualies_Squelshers', 'Glooga_Dualies', 'Dualies', 'Dapple_Dualies', 'Tetra_Dualies', 'Carbon_Roller', 'Dynamo_Roller', 'Flingza_Roller', 'Roller', 'Splatana', 'Splatana_Stamper', 'Undercover_Brella', 'Brella', 'Tenta_Brella', 'Aerospray', 'Splattershot_Pro', 'Splattershot_Jr', 'Squeezer', '52_Gal', '96_Gal', 'Jet_Squelsher', 'Splattershot', 'Splash-o-matic', 'Nzap', 'Sploosh-o-matic', 'H-3_Nozzlenose', 'L-3_Nozzlenose', 'Bloblober', 'Tri_Slosher', 'Sloshing_Machine', 'Slosher', 'Explosher', 'Ballpoint_Splatling', 'Hydra_Splatling', 'Mini_Splatling', 'Nautilus', 'Heavy_Splatling', 'Tri_Stringer', 'Reef_lux']
 
-    # indice = randint(0,len(liste_weapons)-1)
-    # weapon_name = liste_weapons[indice]
-    # for weapon_name in liste_weapons:
-    #     url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+    liste_shooters = ['Aerospray', 'Splattershot_Pro', 'Splattershot_Jr', 'Squeezer', '52_Gal', '96_Gal', 'Jet_Squelsher', 'Splattershot', 'Splash-o-matic', 'Nzap', 'Sploosh-o-matic', 'H-3_Nozzlenose', 'L-3_Nozzlenose']
+
+    liste_blasters = ['Rapid_Blaster_Pro', 'Clash_Blaster', 'Rapid_Blaster', 'Range_Blaster', 'Blaster', 'Luna_Blaster']
+
+    liste_rollers = ['Inkbrush', 'Octobrush','Carbon_Roller', 'Dynamo_Roller', 'Flingza_Roller', 'Roller']
+
+    liste_chargers = ['Gootuber', 'Bamboozler', 'E-Liter_Scope', 'E-Liter', 'Splatterscope', 'Charger', 'Squiffer']
+
+    liste_dualies = ['Dualies_Squelshers', 'Glooga_Dualies', 'Dualies', 'Dapple_Dualies', 'Tetra_Dualies']
+
+    liste_sloshers = ['Bloblober', 'Tri_Slosher', 'Sloshing_Machine', 'Slosher', 'Explosher']
+
+    liste_splatlings = ['Ballpoint_Splatling', 'Hydra_Splatling', 'Mini_Splatling', 'Nautilus', 'Heavy_Splatling']
+
+    liste_brellas = ['Undercover_Brella', 'Brella', 'Tenta_Brella']
+
+    liste_splatanas = ['Splatana', 'Splatana_Stamper']
+
+    liste_stringers = ['Tri_Stringer', 'Reef_lux']
+
+    if len(args) == 0 or args[0]=="random":
+        indice = randint(0,len(liste_weapons)-1)
+        weapon_name = liste_weapons[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
         
-    #     file = File(url_weapon, filename=f"{weapon_name}.png")
-    #     embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, vous devez prendre : {weapon_name}")
-    #     embed.set_image(url=f"attachment://{weapon_name}.png")
-    #     await ctx.send(file=file, embed=embed)
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
 
+    elif args[0] == "shooter":
+        indice = randint(0,len(liste_shooters)-1)
+        weapon_name = liste_shooters[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
+
+    elif args[0] == "roller":
+        indice = randint(0,len(liste_rollers)-1)
+        weapon_name = liste_rollers[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
+
+    elif args[0] == "charger":
+        indice = randint(0,len(liste_chargers)-1)
+        weapon_name = liste_chargers[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
+
+    elif args[0] == "blaster":
+        indice = randint(0,len(liste_blasters)-1)
+        weapon_name = liste_blasters[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
+
+    elif args[0] == "slosher":
+        indice = randint(0,len(liste_sloshers)-1)
+        weapon_name = liste_sloshers[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
+
+    elif args[0] == "brella":
+        indice = randint(0,len(liste_brellas)-1)
+        weapon_name = liste_brellas[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
+
+    elif args[0] == "dualies":
+        indice = randint(0,len(liste_dualies)-1)
+        weapon_name = liste_dualies[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
+
+    elif args[0] == "splatling":
+        indice = randint(0,len(liste_splatlings)-1)
+        weapon_name = liste_splatlings[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
+
+    elif args[0] == "splatana":
+        indice = randint(0,len(liste_splatanas)-1)
+        weapon_name = liste_splatanas[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
+
+    elif args[0] == "stringer":
+        indice = randint(0,len(liste_stringers)-1)
+        weapon_name = liste_stringers[indice]
+        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        
+        file = File(url_weapon, filename=f"{weapon_name}.png")
+        temp = weapon_name.replace("_"," ")
+        embed = Embed(title="Random Weapon", description=f"{ctx.author.mention}, you must play : {temp}", color=0x33CAFF)
+        embed.set_image(url=f"attachment://{weapon_name}.png")
+        embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+        await ctx.send(file=file, embed=embed)
 
 
 import sys
