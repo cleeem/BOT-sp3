@@ -2657,7 +2657,7 @@ def thi(position,img = img2) :
 
 
 def uk(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/Unknown.png")
+    img = Image.open("images_bot/emote_stuff/Unknown.png").resize(size=(64,64))
     
     colonne,ligne = img.size
     
@@ -2758,9 +2758,8 @@ def uk(position,img = img2) :
         img2.save("images_bot/emote_stuff/blanc_resultat.png")
 
 
-
 def ia(position,img = img2) :
-    img = Image.open("images_bot/emote_stuff/Intensify_Action.png")
+    img = Image.open("images_bot/emote_stuff/Action_UP.png")
     
     colonne,ligne = img.size
     
