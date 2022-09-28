@@ -488,7 +488,7 @@ async def help(ctx):
 
     membre = ctx.author
 
-    dico = {'fields': [
+    dico_embed1 = {'fields': [
             {'inline': False, 'name': "Command : map ", 'value': "``` show the current rotation in every mode ```"}, 
             {'inline': False, 'name': "Command : drop ", 'value': "``` show the drop of the day ```"},
             {'inline': False, 'name': "Command : splatnet ", 'value': "``` show the current gears in the app ```"},
@@ -497,18 +497,25 @@ async def help(ctx):
             
             ], 'title' : 'Help' , 'color': 3394303, 'type': 'rich', 'description': ""}
 
-    embed_help_1 = Embed.from_dict(dico)     
+    embed_help_1 = Embed.from_dict(dico_embed1)     
 
-    embed_docu = Embed(title="Documentation", description="")  
+    dico_embed_docu = {'fields': [
+            {'inline': False, 'name': "What language do i use?", 'value': "```I use Python and discord.py ```"}, 
+            {'inline': False, 'name': "Where do i host the bot? ", 'value': "```I currently use Alwaydata, it provide free machine you can use with ssh\n(free under 100Mb of data) ```"},
+            {'inline': False, 'name': "What IDE do i use?", 'value': "```I use Visual Studio Code (it's free) ```"}, 
+            
+            ], 'title' : 'Documentation' , 'color': 3394303, 'type': 'rich', 'description': "You will find here some informations about the code or what i used"}
+
+    embed_docu = Embed.from_dict(dico_embed_docu)   
 
 
     async def callback_1(interaction):
         if interaction.user.id == membre.id:
-            await interaction.message.edit(embed = embed_help_1)
+            await interaction.message.edit(view=view, embed = embed_help_1)
 
     async def callback_docu(interaction):
         if interaction.user.id == membre.id:
-            await interaction.message.edit(embed = embed_docu)
+            await interaction.message.edit(view=view, embed = embed_docu)
 
     async def callback_destroy(interaction):
         if interaction.user.id == membre.id:
@@ -516,7 +523,7 @@ async def help(ctx):
             await message_commande.delete()
 
 
-    button_1 = bt.Button(label=1, style=ButtonStyle.blurple)
+    button_1 = bt.Button(label="page 1", style=ButtonStyle.blurple)
     button_1.callback = callback_1
 
     button_docu = bt.Button(label="Documentation",style=ButtonStyle.green)
