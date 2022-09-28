@@ -1,3 +1,5 @@
+from genericpath import exists
+from os import mkdir
 from PIL import Image
 
 
@@ -2872,7 +2874,6 @@ def clear() :
             img2.putpixel((i,j),(255,255,255))
     img2.save("images_bot/emote_stuff/blanc_resultat.png")
     
-    
 from csv import *
 
 def addincsv(url_file,objet,newline =True, delimiter =  None):
@@ -2886,15 +2887,10 @@ def addincsv(url_file,objet,newline =True, delimiter =  None):
 
 def save(id,nom_stuff) :
     img = Image.open("images_bot/emote_stuff/blanc_resultat.png")
-            
-    img.save(f"images_bot/stuffs/{id}/{nom_stuff}.png")
-
     
-for i in range(13):
-    sru(i)
+    if not exists(f"user_data/stuffs/{id}"):
+        mkdir(f"user_data/stuffs/{id}")
+    img.save(f"user_data/stuffs/{id}/{nom_stuff}.png")
 
-save(1,"test")
-clear()
-    
-
+   
 #clear()

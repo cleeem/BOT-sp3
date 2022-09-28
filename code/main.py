@@ -417,6 +417,9 @@ def stuff_emote(liste):
         
         elif elt == "uk":
             stuf.append('<:uk:855479856511057951>')
+        
+        else:
+            stuf.append('<:uk:855479856511057951>')
 
         if i == 3 or i == 7:
             stuf.append("oui")
@@ -434,6 +437,21 @@ async def stuff(ctx, *args):
     
     embed_message = Embed(description = f"How do you want your stuff? \nNote, image can take some time" , color = 0x33CAFF)
 
+    def checkMessage(message):
+        return message.author == ctx.message.author and ctx.message.channel == message.channel
+
+    async def callback_save(interaction):
+        await ctx.send("chose a name for your stuff")
+        message_stuff = await bot.wait_for("message" , check = checkMessage)
+        nom_stuff = message_stuff.content
+        nom_stuff = str(nom_stuff).replace(" ","_").replace("+","_")
+        id = interaction.message.author.id
+        fs.save(id=id, nom_stuff=nom_stuff)
+        try:
+            await message_stuff.add_reaction("✅")
+        except:
+            pass
+
     async def callback_image(interaction):
         if interaction.user.id == ctx.author.id:
             stuff_image(liste=liste_bonus)
@@ -442,8 +460,14 @@ async def stuff(ctx, *args):
             embed = Embed(title="STUFF", description="here is your stuff", color=0x33CAFF)
             embed.set_image(url=f"attachment://blanc_resultat.png")
             embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
+
+            button_save = bt.Button(label="save", style=ButtonStyle.primary)
+            button_save.callback = callback_save
+
+            view.add_item(button_save)
+
             await interaction.message.delete()
-            await ctx.send(file=file, embed=embed)
+            await ctx.send(view=view, file=file, embed=embed)
 
     async def callback_emote(interaction):
         if interaction.user.id == ctx.author.id:
@@ -476,11 +500,9 @@ async def bonus(ctx):
                                                 """, color=0x33CAFF)
     await ctx.send(embed=embed)
     
-    
 @bot.command()
 async def github(ctx):
     await ctx.send("https://github.com/cleeem/BOT-sp3")
-
 
 @bot.command()
 async def help(ctx):
