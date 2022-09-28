@@ -437,20 +437,20 @@ async def stuff(ctx, *args):
     
     embed_message = Embed(description = f"How do you want your stuff? \nNote, image can take some time" , color = 0x33CAFF)
 
+    id = ctx.author.id
+
     def checkMessage(message):
         return message.author == ctx.message.author and ctx.message.channel == message.channel
 
     async def callback_save(interaction):
         await ctx.send("chose a name for your stuff")
-        message_stuff = await bot.wait_for("message" , check = checkMessage)
+        message_stuff = await bot.wait_for("message", check = checkMessage)
         nom_stuff = message_stuff.content
         nom_stuff = str(nom_stuff).replace(" ","_").replace("+","_")
-        id = interaction.message.author.id
+        
         fs.save(id=id, nom_stuff=nom_stuff)
-        try:
-            await message_stuff.add_reaction("✅")
-        except:
-            pass
+            
+        
 
     async def callback_image(interaction):
         if interaction.user.id == ctx.author.id:
