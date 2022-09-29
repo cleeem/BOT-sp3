@@ -469,6 +469,7 @@ async def stuff(ctx, *args):
 
             await interaction.message.delete()
             await ctx.send(file=file, embed=embed)
+            fs.clear()
 
     async def callback_emote(interaction):
         if interaction.user.id == ctx.author.id:
