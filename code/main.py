@@ -1,6 +1,8 @@
 ###################
 # DISCORD IMPORTS #
 ###################
+from os import listdir
+from xmlrpc.server import list_public_methods
 import discord.ui as bt
 from discord import *
 from discord.ext import commands
@@ -35,7 +37,6 @@ async def on_ready():
     print("Ready !")
     activity = Game(name=f"$help\nOn {len(bot.guilds)} servers", type=1)
     await bot.change_presence(status=Status.online, activity=activity)  
-
 
 @bot.command()
 async def map(ctx):
@@ -461,13 +462,13 @@ async def stuff(ctx, *args):
             embed.set_image(url=f"attachment://blanc_resultat.png")
             embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
 
-            button_save = bt.Button(label="save", style=ButtonStyle.primary)
-            button_save.callback = callback_save
+            # button_save = bt.Button(label="save", style=ButtonStyle.primary)
+            # button_save.callback = callback_save
 
-            view.add_item(button_save)
+            # view.add_item(button_save)
 
             await interaction.message.delete()
-            await ctx.send(view=view, file=file, embed=embed)
+            await ctx.send(file=file, embed=embed)
 
     async def callback_emote(interaction):
         if interaction.user.id == ctx.author.id:
@@ -515,16 +516,20 @@ async def help(ctx):
             {'inline': False, 'name': "Command : drop ", 'value': "``` show the drop of the day ```"},
             {'inline': False, 'name': "Command : splatnet ", 'value': "``` show the current gears in the app ```"},
             {'inline': False, 'name': "Command : rw *type* ", 'value': "``` gives you a randow weapon \n (you can specifie the type) \n shooter ; roller; charger; slosher; splatling \n brella ; blaster ; dualies ; splatana ; stringer ```"},
-            {'inline': False, 'name': "Command : stuff *bonus* ", 'value': "``` chose up to 12 bonus in your stuff \n Use the bonus command to see their name```"},
+            {'inline': False, 'name': "Command : stuff *bonus* ", 'value': "``` chose up to 12 bonuses in your stuff \n Use the bonus command to see their name```"},
+            {'inline': False, 'name': "Command : bonus ", 'value': "``` show all the bonuses ```"}, 
             
             ], 'title' : 'Help' , 'color': 3394303, 'type': 'rich', 'description': ""}
 
     embed_help_1 = Embed.from_dict(dico_embed1)     
 
     dico_embed_docu = {'fields': [
-            {'inline': False, 'name': "What language do i use?", 'value': "```I use Python and discord.py ```"}, 
+            {'inline': False, 'name': "What language do i use?", 'value': "```I use Python and discord.py``` (https://discordpy.readthedocs.io/en/latest/api.html) "}, 
             {'inline': False, 'name': "Where do i host the bot? ", 'value': "```I currently use Alwaydata, it provide free machine you can use with ssh\n(free under 100Mb of data) ```"},
             {'inline': False, 'name': "What IDE do i use?", 'value': "```I use Visual Studio Code (it's free) ```"}, 
+            {'inline': False, 'name': "Splatoon.ink     (https://splatoon2.ink)", 'value': "```For all the splatnet informations ```"}, 
+            {'inline': False, 'name': "Inkpedia     (https://splatoonwiki.org/wiki/Main_Page)", 'value': "```For the emotes and some images ```"}, 
+
             
             ], 'title' : 'Documentation' , 'color': 3394303, 'type': 'rich', 'description': "You will find here some informations about the code or what i used"}
 
@@ -541,7 +546,6 @@ async def help(ctx):
 
     async def callback_destroy(interaction):
         if interaction.user.id == membre.id:
-            await interaction.message.delete()
             await message_commande.delete()
 
 
