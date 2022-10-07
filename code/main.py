@@ -27,7 +27,7 @@ client = Client()
 intents = Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix="!", description="Bot de clem#1777", intents=intents)
+bot = commands.Bot(command_prefix="$", description="Bot de clem#1777", intents=intents)
 
 bot.remove_command('help')
 
@@ -586,4 +586,4 @@ token_run_main = token_bot.tokens["token_bot_principal"]
 #2eme bot
 token1 = token_bot.tokens["token_bot_test"]
 
-bot.run(token1)
+bot.run(token_run_main)
