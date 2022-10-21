@@ -1,8 +1,6 @@
 ###################
 # DISCORD IMPORTS #
 ###################
-from os import listdir
-from xmlrpc.server import list_public_methods
 import discord.ui as bt
 from discord import *
 from discord.ext import commands
@@ -27,7 +25,7 @@ client = Client()
 intents = Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix="$", description="Bot de clem#1777", intents=intents)
+bot = commands.Bot(command_prefix="!", description="Bot de clem#1777", intents=intents)
 
 bot.remove_command('help')
 
@@ -107,7 +105,7 @@ async def rw(ctx, *args):
     if len(args) == 0 or args[0]=="random":
         indice = randint(0,len(liste_weapons)-1)
         weapon_name = liste_weapons[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -119,7 +117,7 @@ async def rw(ctx, *args):
     elif args[0] == "shooter":
         indice = randint(0,len(liste_shooters)-1)
         weapon_name = liste_shooters[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -131,7 +129,7 @@ async def rw(ctx, *args):
     elif args[0] == "roller":
         indice = randint(0,len(liste_rollers)-1)
         weapon_name = liste_rollers[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -143,7 +141,7 @@ async def rw(ctx, *args):
     elif args[0] == "charger":
         indice = randint(0,len(liste_chargers)-1)
         weapon_name = liste_chargers[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -155,7 +153,7 @@ async def rw(ctx, *args):
     elif args[0] == "blaster":
         indice = randint(0,len(liste_blasters)-1)
         weapon_name = liste_blasters[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -167,7 +165,7 @@ async def rw(ctx, *args):
     elif args[0] == "slosher":
         indice = randint(0,len(liste_sloshers)-1)
         weapon_name = liste_sloshers[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -179,7 +177,7 @@ async def rw(ctx, *args):
     elif args[0] == "brella":
         indice = randint(0,len(liste_brellas)-1)
         weapon_name = liste_brellas[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -191,7 +189,7 @@ async def rw(ctx, *args):
     elif args[0] == "dualies":
         indice = randint(0,len(liste_dualies)-1)
         weapon_name = liste_dualies[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -203,7 +201,7 @@ async def rw(ctx, *args):
     elif args[0] == "splatling":
         indice = randint(0,len(liste_splatlings)-1)
         weapon_name = liste_splatlings[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -215,7 +213,7 @@ async def rw(ctx, *args):
     elif args[0] == "splatana":
         indice = randint(0,len(liste_splatanas)-1)
         weapon_name = liste_splatanas[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -227,7 +225,7 @@ async def rw(ctx, *args):
     elif args[0] == "stringer":
         indice = randint(0,len(liste_stringers)-1)
         weapon_name = liste_stringers[indice]
-        url_weapon = f"images_bot/images_armes/{weapon_name}.png"
+        url_weapon = f"../images_bot/images_armes/{weapon_name}.png"
         
         file = File(url_weapon, filename=f"{weapon_name}.png")
         temp = weapon_name.replace("_"," ")
@@ -457,7 +455,7 @@ async def stuff(ctx, *args):
         if interaction.user.id == ctx.author.id:
             stuff_image(liste=liste_bonus)
 
-            file = File("images_bot/emote_stuff/blanc_resultat.png", filename="blanc_resultat.png")
+            file = File("../images_bot/emote_stuff/blanc_resultat.png", filename="blanc_resultat.png")
             embed = Embed(title="STUFF", description="here is your stuff", color=0x33CAFF)
             embed.set_image(url=f"attachment://blanc_resultat.png")
             embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
@@ -547,6 +545,7 @@ async def help(ctx):
 
     async def callback_destroy(interaction):
         if interaction.user.id == membre.id:
+            await interaction.message.delete()
             await message_commande.delete()
 
 
