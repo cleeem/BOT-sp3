@@ -18,14 +18,13 @@ import fichier_stuff as fs
 #################
 from random import randint
 import time
+import os
 
-
-client = Client()
-
-intents = Intents.default()
+intents = Intents.all()
 intents.members = True
 
-bot = commands.Bot(command_prefix="!", description="Bot de clem#1777", intents=intents)
+
+bot = commands.Bot(command_prefix="$", description="Bot de clem#1777", intents=intents)
 
 bot.remove_command('help')
 
@@ -235,197 +234,29 @@ async def rw(ctx, *args):
         await ctx.send(file=file, embed=embed)
 
 def stuff_image(liste):
+
+    image_stuff = fs.new()
+
     for i,elt in enumerate(liste):
-        if elt == "ssu":
-            fs.ssu(i+1)
-
-        elif elt == "rsu":
-            fs.rsu(i+1)
-
-        elif elt == "ism":
-            fs.ism(i+1)
-
-        elif elt == "scu":
-            fs.scu(i+1)
-
-        elif elt == "spu":
-            fs.spu(i+1)
-            
-        elif elt == "ss":
-            fs.ss(i+1)
-            
-        elif elt == "qsj":
-            fs.qsj(i+1)
-            
-        elif elt == "qr":
-            fs.qr(i+1)
-            
-        elif elt == "os":
-            fs.os(i+1)
-            
-        # elif elt == "mpu":
-        #     fs.mpu(i+1)
-
-        # elif elt == "bdu":
-        #     fs.bdu(i+1)
-            
-        elif elt == "iss":
-            fs.iss(i+1)
-            
-        elif elt == "cbk":
-            fs.cbk(i+1)
-            
-        elif elt == "ir":
-            fs.ir(i+1)
-            
-        elif elt == "dr":
-            fs.dr(i+1)
-            
-        elif elt == "iru":
-            fs.iru(i+1)
-            
-        elif elt == "lde":
-            fs.lde(i+1)
-            
-        elif elt == "sbpu":
-            fs.sbpu(i+1)
-            
-        elif elt == "tnty":
-            fs.tnty(i+1)
-            
-        elif elt == "hnt":
-            fs.hnt(i+1)
-            
-        elif elt == "ns":
-            fs.ns(i+1)
-            
-        elif elt == "thi":
-            fs.thi(i+1)
-            
-        elif elt == "rsp":
-            fs.rsp(i+1)
-            
-        elif elt == "sj":
-            fs.sj(i+1)
-            
-        elif elt == "og":
-            fs.og(i+1)
-
-        elif elt == "sru":
-            fs.sru(i+1)
-
-        elif elt == "ia":
-            fs.ia(i+1)
-            
-        elif elt == "ab":
-            fs.ab(i+1)         
-        
-        elif elt == "uk":
-            fs.uk(i+1)
-
-        else:
-            fs.uk(i+1)
+        fs.add(image_stuff, elt, i)
     
+    return image_stuff
+
 def stuff_emote(liste):
-    stuf = []
+    liste_stuff = []
 
+    
     for i,elt in enumerate(liste):
-        if elt == "ssu":
-            stuf.append("<:ssu:855390371827023882>")
+        liste_stuff.append(fs.TRANSLATE_EMOTE[elt])
 
-        elif elt == "rsu":
-            stuf.append('<:rsu:855390367264407572>')
+        if i % 4 == 3:
+            liste_stuff.append("oui")
 
-        elif elt == "ism":
-            stuf.append('<:ism:855390367586975745>')
-
-        elif elt == "scu":
-            stuf.append('<:scu:855390371840000001>')
-
-        elif elt == "spu":
-            stuf.append('<:spu:855390372254318622>')
-        
-        elif elt == "ss":
-            stuf.append('<:ss:855390372129144842>')
-            
-        elif elt == "qsj":
-            stuf.append('<:qsj:855390367745310750>')
-            
-        elif elt == "qr":
-            stuf.append('<:qr:855390372208312330>')
-            
-        elif elt == "os":
-            stuf.append('<:os:855390368778027038>')
-            
-        # elif elt == "mpu":
-        #     stuf.append('<:mpu:855390368131842068>')
-
-        # elif elt == "bdu":
-        #     stuf.append('<:bdu:855390365708058624>')
-            
-        elif elt == "iss":
-            stuf.append('<:iss:855390372125868063>')
-            
-        elif elt == "cbk":
-            stuf.append('<:bdu:855390365708058624>')
-            
-        elif elt == "ir":
-            stuf.append('<:ir:855390370362556436>')
-            
-        elif elt == "dr":
-            stuf.append('<:dr:855390372204773387>')
-            
-        elif elt == "iru":
-            stuf.append('<:iru:855390367464292352>')
-            
-        elif elt == "lde":
-            stuf.append('<:lde:855390366755717120>')
-            
-        elif elt == "sbpu":
-            stuf.append('<:sbpu:855390365895753749>')
-            
-        elif elt == "tnty":
-            stuf.append('<:tnty:855390368065388576>')
-            
-        elif elt == "hnt":
-            stuf.append('<:hnt:855390366453989426>')
-            
-        elif elt == "ns":
-            stuf.append('<:ns:855390376185692180>')
-            
-        elif elt == "thi":
-            stuf.append('<:ti:855390376374304798>')
-            
-        elif elt == "rsp":
-            stuf.append('<:rp:855390366991646730>')
-            
-        elif elt == "sj":
-            stuf.append('<:sj:855390376235892756>')
-            
-        elif elt == "og":
-            stuf.append('<:og:855390372141465610>')
-
-        elif elt == "sru":
-            stuf.append("<:sru:1019332176782839868>")
-
-        elif elt == "ia":
-            stuf.append("<:ia:1019332137687724032>")
-            
-        elif elt == "ab":
-            stuf.append('<:ab:855479824009527306> ')         
-        
-        elif elt == "uk":
-            stuf.append('<:uk:855479856511057951>')
-        
-        else:
-            stuf.append('<:uk:855479856511057951>')
-
-        if i == 3 or i == 7:
-            stuf.append("oui")
-
-    res = str(stuf).replace("'","").replace(",","").replace("[","").replace("]","").replace("oui","""
+    res = str(liste_stuff).replace("'","").replace(",","").replace("[","").replace("]","").replace("oui","""
 """)
     return res
+
+
 
 @bot.command()
 async def stuff(ctx, *args):
@@ -453,11 +284,13 @@ async def stuff(ctx, *args):
 
     async def callback_image(interaction):
         if interaction.user.id == ctx.author.id:
-            stuff_image(liste=liste_bonus)
+            image = stuff_image(liste=liste_bonus)
 
-            file = File("../images_bot/emote_stuff/blanc_resultat.png", filename="blanc_resultat.png")
+            image.save("result.png")
+
+            file = File("result.png", filename="result.png")
             embed = Embed(title="STUFF", description="here is your stuff", color=0x33CAFF)
-            embed.set_image(url=f"attachment://blanc_resultat.png")
+            embed.set_image(url=f"attachment://result.png")
             embed.set_footer(text=time.ctime(time.time()), icon_url=ctx.author.avatar)
 
             # button_save = bt.Button(label="save", style=ButtonStyle.primary)
@@ -467,13 +300,14 @@ async def stuff(ctx, *args):
 
             await interaction.message.delete()
             await ctx.send(file=file, embed=embed)
-            fs.clear()
+
 
     async def callback_emote(interaction):
         if interaction.user.id == ctx.author.id:
             res_stuff = stuff_emote(liste=liste_bonus)
             embed_stuff = Embed(title="STUFF", description="here is your stuff \n" + res_stuff, color=0x33CAFF)
-            await interaction.message.edit(embed=embed_stuff)
+            await interaction.message.delete()
+            await ctx.send(embed=embed_stuff)
 
     button_image = bt.Button(label="image", style=ButtonStyle.primary)
     button_image.callback = callback_image
@@ -500,6 +334,7 @@ async def bonus(ctx):
                                                 """, color=0x33CAFF)
     await ctx.send(embed=embed)
     
+
 @bot.command()
 async def github(ctx):
     await ctx.send("https://github.com/cleeem/BOT-sp3")
@@ -585,4 +420,4 @@ token_run_main = token_bot.tokens["token_bot_principal"]
 #2eme bot
 token1 = token_bot.tokens["token_bot_test"]
 
-bot.run(token_run_main)
+bot.run(token1)

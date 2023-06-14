@@ -117,7 +117,7 @@ class Rotation:
         self.thumbnail_url = ""
 
         for k in data.keys():
-
+            print(k)
             if "regular" in k:
                 settings = "regularMatchSetting"
                 self.thumbnail_url = "http://splating.ink/turf.png"
@@ -242,4 +242,7 @@ def get_daily():
     daily_gears = Daily_brand(data=data_stuff)
 
     return daily_gears
-    
+
+
+# for elt in list_mode:
+#     get_data(elt)
